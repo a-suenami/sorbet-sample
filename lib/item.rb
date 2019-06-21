@@ -10,7 +10,7 @@ class Item
   sig { returns(ItemPrice) }
   attr_reader :price
 
-  sig {params(id: ItemId, name: ItemName, price: ItemPrice).returns(Object)}
+  sig {params(id: ItemId, name: ItemName, price: ItemPrice).void}
   def initialize(id, name, price)
     @id = T.let(id, ItemId)
     @name = T.let(name, ItemName)
